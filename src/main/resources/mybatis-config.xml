@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 开启驼峰命名规则，详细请参见官方文档 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	<typeAliases>
+		<!-- 为类起别名 -->
+		<package name="cn.crud.bean"/>
+	</typeAliases>
+	<!-- 分页插件的使用 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!-- 配置合理化参数 -->
+			<property name="reasonable" value="true"/>
+		</plugin>
+	</plugins>
+</configuration>
